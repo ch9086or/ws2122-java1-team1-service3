@@ -191,7 +191,6 @@ public class FacultyProduction {
         Module module = moduleRepository.findByName(moduleName);
         if (!module.getUrlDescriptionDocument().contains(urlDescriptionDocument)) {
             String newUrlDescriptionDocument = module.getUrlDescriptionDocument();
-            newUrlDescriptionDocument.add(urlDescriptionDocument);
             module.setUrlDescriptionDocument(newUrlDescriptionDocument);
         } else return;
         moduleRepository.save(module);
