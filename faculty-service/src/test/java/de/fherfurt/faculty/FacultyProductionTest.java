@@ -188,7 +188,7 @@ class FacultyProductionTest {
 
         assertFalse(moduleRepository.findByName(moduleName).getUrlDescriptionDocument().contains(newUrlDescriptionDocument));
         // WHEN
-        facultyProduction.addUrlDescriptionDocument(newUrlDescriptionDocument, moduleName);
+        facultyProduction.setUrlDescriptionDocument(newUrlDescriptionDocument, moduleName);
         // THEN
         assertTrue(moduleRepository.findByName(moduleName).getUrlDescriptionDocument().contains(newUrlDescriptionDocument));
     }
